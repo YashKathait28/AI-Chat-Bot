@@ -1,0 +1,42 @@
+/* Scrollbar for light mode (default) */
+.container::-webkit-scrollbar {
+  width: 12px;
+  background: #fde8fb; /* very light pink track */
+  border-radius: 8px;
+}
+.container::-webkit-scrollbar-thumb {
+  background: #ec4899; /* pink thumb */
+  border-radius: 12px;
+  border: 3px solid #fbe8fd; /* border for contrast */
+}
+.container::-webkit-scrollbar-track {
+  background: #fde8fb;
+  border-radius: 8px;
+}
+.container::-webkit-scrollbar-thumb:hover {
+  background: #a21caf; /* deeper purple on hover */
+}
+
+/* Scrollbar for dark mode */
+.dark .container::-webkit-scrollbar {
+  width: 12px;
+  background: #18181b;
+  border-radius: 8px;
+}
+.dark .container::-webkit-scrollbar-thumb {
+  background: #4c4c55; /* dark thumb */
+  border-radius: 12px;
+  border: 3px solid #18181b;
+}
+.dark .container::-webkit-scrollbar-track {
+  background: #18181b; /* dark track */
+  border-radius: 8px;
+}
+.dark .container::-webkit-scrollbar-thumb:hover {
+  background: #a21caf;
+}
+
+/* Hide corner and add transition effect */
+.container::-webkit-scrollbar-corner {
+  background: transparent;
+}

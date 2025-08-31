@@ -1,5 +1,5 @@
 
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { URL } from './constants';
 import RecentSearch from './components/RecentSearch';
@@ -10,7 +10,7 @@ function App() {
   const [result, setResult] = useState([]);
   const [recentHistory, setRecentHistory] = useState(JSON.parse(localStorage.getItem('history')));
   const [selectedHistory, setSelectedHistory] = useState('')
-  const scrollToAns = useRef();
+  // const scrollToAns = useRef();
   const [loader, setLoader] = useState(false);
 
 
@@ -60,7 +60,7 @@ function App() {
     setQuestion('')
 
     setTimeout(() => {
-      scrollToAns.current.scrollTop = scrollToAns.current.scrollHeight;
+      // scrollToAns.current.scrollTop = scrollToAns.current.scrollHeight;
 
     }, 500);
 
@@ -99,7 +99,7 @@ function App() {
   return (
     <div className={darkMode=='dark'?'dark':'light'}>
     <div className='grid grid-cols-5 h-screen text-center'>
-      <select onChange={(event)=>setDarkMode(event.target.value)} className=' fixed text-white bottom-0 p-5'>
+      <select onChange={(event)=>setDarkMode(event.target.value)} className=' fixed text-black dark:text-white bottom-0 p-5'>
         <option value="dark" >Dark</option>
         <option value="light" >Light</option>
 
@@ -120,7 +120,7 @@ function App() {
         }
 
 
-        <div ref={scrollToAns} className='container h-110 overflow-scroll'>
+        <div className='container h-110 overflow-scroll'>
           <div className='dark:text-zinc-300 text-zinc-800'>
             <ul>
               {
