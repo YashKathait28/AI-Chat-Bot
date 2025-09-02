@@ -106,7 +106,7 @@ function App() {
       </select>
    <RecentSearch recentHistory={recentHistory} setRecentHistory={setRecentHistory} setSelectedHistory={setSelectedHistory} />
       <div className='col-span-4 p-10'>
-        <h1 className='text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700'
+        <h1 className='text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700 mb-7 '
         >Hello User, Ask me Anything</h1>
         {
           loader ?
